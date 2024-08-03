@@ -1,8 +1,7 @@
 const delayBetweenJoin = 15 // this is in seconds, recommend minimum = 15
-const sessionID = "INSERT_HERE"
 
 const invs /* seperate invite links with new lines */ =
-`
+  `
 https://discord.gg/inv1
 https://discord.gg/inv2
 https://discord.gg/inv3
@@ -34,7 +33,9 @@ function promisifiedWait(ms) {
 }
 
 const splitInvs = invs.split(/\r?\n/)
+
 const token = (webpackChunkdiscord_app.push([[''], {}, e => { m = []; for (let c in e.c) m.push(e.c[c]) }]), m).find(m => m?.exports?.default?.getToken !== void 0).exports.default.getToken()
+const sessionID = (webpackChunkdiscord_app.push([[''], {}, e => { m = []; for (let c in e.c) m.push(e.c[c]) }]), m).find(m => m?.exports?.Z?.getSession !== void 0).exports.Z.getSession().sessionId
 
 async function _run() {
   for (const inv of splitInvs) {
